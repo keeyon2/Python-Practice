@@ -15,6 +15,7 @@ RunFunctionOnInputs(foo, 1, 2)
 
 x = 1
 
+# Testing Global Keyword within functions
 def SetNormal ():
 	x = 2
 	return x
@@ -42,4 +43,16 @@ print x
 print x
 print SetGlobal()
 print x
+
+print "keeyon" < "a"
+
+print bin(5)[2:].zfill(8)
+print bin(1)[2:].zfill(8)
+
+
+print bool(2)
+print bool (0)
+print bytearray(1)
+
+
 
