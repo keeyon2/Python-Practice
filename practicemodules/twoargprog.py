@@ -25,7 +25,7 @@ def two_arguments_sys_argv():
     return
 
 
-def two_arguemnts_addition(args):
+def mult_arguemnts_addition(args):
     print
     print
     print
@@ -48,6 +48,11 @@ def two_arguemnts_addition(args):
     print
     return args
 
+
+def add_two_numbers(int1, int2):
+    return int1 + int2
+
+
 if __name__ == '__main__':
     # two_arguments_sys_argv()
 
@@ -55,4 +60,4 @@ if __name__ == '__main__':
         print "Please give program some input ints"
 
     else:
-        two_arguemnts_addition(sys.argv[1:])
+        mult_arguemnts_addition(sys.argv[1:])
