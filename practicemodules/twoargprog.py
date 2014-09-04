@@ -25,28 +25,28 @@ def two_arguments_sys_argv():
     return
 
 
-def mult_arguemnts_addition(args):
-    print
-    print
-    print
-    print
-    print "Add 2 Arguments with *self"
-    print "-----------------"
-    print "Arguments: ", args
-    print "Total Arguments: ", len(args)
-    print "Arguments List: "
-    for arg in args:
-        print arg
+def mult_arguments_addition(*args):
+    # print
+    # print
+    # print
+    # print
+    # print "Add 2 Arguments with *self"
+    # print "-----------------"
+    # print "Arguments: ", args
+    # print "Total Arguments: ", len(args)
+    # print "Arguments List: "
+    # for arg in args:
+    #     print arg
 
     # if len(arg) > 1:
     # 	print "Var 1: %d    Var 2: %d" % (int(arg[0]), int(arg[1])
     # 	#print "Fist Two Argments Sum: ", int(arg[0]) + int(arg[1])
 
-    print ''' This is how you print a %  '''
-    print
-    print
-    print
-    return args
+    # print ''' This is how you print a %  '''
+    # print
+    # print
+    # print
+    return sum(args)
 
 
 def add_two_numbers(int1, int2):
@@ -60,4 +60,4 @@ if __name__ == '__main__':
         print "Please give program some input ints"
 
     else:
-        mult_arguemnts_addition(sys.argv[1:])
+        mult_arguments_addition(sys.argv[1:])
