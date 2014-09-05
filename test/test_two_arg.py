@@ -16,7 +16,7 @@ class TestTwoArgProgramFunctions(unittest.TestCase):
     def test_adding_two_numbers(self):
         print "Running Test test_adding_two_numbers"
         warning = "add_two_numbers gave an incorrect addition value"
-        self.assertEqual(progname.add_two_numbers(1, 2), 3, warning)
+        self.assertEqual(twoargprog.add_two_numbers(1, 2), 3, warning)
 
     # def test_adding_mult_args(self):
     #     self.assertEqual(self.twoargprog.mult_arguments_addition(1,2,3,4),
