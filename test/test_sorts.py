@@ -15,8 +15,23 @@ def test_push_list_elements():
 
 
 def test_insertion_sort():
-    for x in range(10):
-        list = random.sample(range(100), 20)
+    for x in range(100):
+        list1 = random.sample(range(100), 20)
         list2 = random.sample(range(100), 2)
-        assert sorted(list) == sorts.insertion_sort(list)
+        assert sorted(list1) == sorts.insertion_sort(list1)
         assert sorted(list2) == sorts.insertion_sort(list2)
+
+
+def test_merge_sort():
+    for x in range(100):
+        list1 = random.sample(range(100), 20)
+        list2 = random.sample(range(100), 2)
+        assert sorted(list1) == sorts.merge_sort(list1)
+        assert sorted(list2) == sorts.merge_sort(list2)
+
+
+def test_merge_sorted_lists():
+    for x in range(100):
+        list1 = sorted(random.sample(range(100), 20))
+        list2 = sorted(random.sample(range(100), 20))
+        assert sorted(list1 + list2) == sorts.merge(list1, list2)

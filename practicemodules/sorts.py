@@ -32,13 +32,56 @@ def push_list_elements(list, replaceInitialIndex, pushToIndex):
         templist[x+1] = list[x]
     return templist
 
+
+def merge_sort(list):
+    if len(list) == 1:
+        return list
+
+    half = len(list)/2
+    list1 = merge_sort(list[:half])
+    list2 = merge_sort(list[half:])
+    return merge(list1, list2)
+
+
+def merge(list1, list2):
+    i = 0
+    j = 0
+    finalList = []
+    while (i < len(list1) or j < len(list2)):
+        if i == len(list1):
+            finalList.append(list2[j])
+            j = j + 1
+            continue
+
+        elif j == len(list2):
+            finalList.append(list1[i])
+            i = i + 1
+            continue
+
+        if (list1[i] < list2[j]):
+            finalList.append(list1[i])
+            i = i + 1
+        else:
+            finalList.append(list2[j])
+            j = j + 1
+    return finalList
+
+
 if __name__ == '__main__':
     # Test push_list_elements
-    list = push_list_elements(range(10), 8, 9)
-    print list
+    # list = push_list_elements(range(10), 8, 9)
+    # print list
+
+    # Test merge
+    list1 = [0, 3, 5, 8, 34]
+    list2 = [2, 10, 12, 45]
+    print list1
+    print list2
+    print "After merge"
+    print merge(list1, list2)
 
     # Test Complete
-    for x in range(3):
-        list = random.sample(range(100), 20)
-        print list
-        print insertion_sort(list)
+    # for x in range(3):
+    #     list = random.sample(range(100), 20)
+    #     print list
+    #     print merge_sort(list)
